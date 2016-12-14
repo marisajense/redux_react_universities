@@ -1,0 +1,17 @@
+<%= form_for(api_university) do |f| %>
+  <% if api_university.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(api_university.errors.count, "error") %> prohibited this api_university from being saved:</h2>
+
+      <ul>
+      <% api_university.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
